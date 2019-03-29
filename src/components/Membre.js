@@ -1,12 +1,15 @@
 import React, { Fragment } from "react";
 
-const Membre = ({ nom, children }) => {
+const Membre = ({ nom, age, children }) => {
 return (
     <Fragment>
-  <p>
-    Nom: { nom }
-  </p>
-  <div>{ children }</div>  
+  <li 
+  className={ age < 50 ? "list-group-item" : "bg-danger list-group-item"} 
+  >
+    Nom: { nom } <br/>
+    Age: { age }
+  <span>{ children }</span>
+  </li>  
   </Fragment>
 )
 };
